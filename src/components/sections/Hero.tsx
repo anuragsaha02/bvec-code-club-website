@@ -1,11 +1,11 @@
-import { ChevronDown, Sparkles } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const [showArrow, setShowArrow] = useState(false);
   
   useEffect(() => {
+    // Show arrow after the typing animation completes
     const timer = setTimeout(() => {
       setShowArrow(true);
     }, 3500);
@@ -13,8 +13,11 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
   
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
   
   return (
@@ -32,26 +35,26 @@ const Hero = () => {
           </h2>
         </div>
         
-        <div className="relative group">
-          <Button 
-            onClick={scrollToContact}
-            className="relative px-8 py-6 text-lg bg-background text-primary border border-primary/20 rounded-lg"
+        <div>
+          <button 
+            className="btn-outline"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Join the Club
-            <Sparkles className="inline-block ml-2 w-5 h-5" />
-          </Button>
+          </button>
         </div>
         
         {showArrow && (
           <div 
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer mt-16"
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={scrollToAbout}
           >
             <ChevronDown size={32} className="text-primary" />
           </div>
         )}
       </div>
       
+      {/* Code floating elements */}
       <div className="absolute top-1/4 left-10 md:left-20 text-primary/20 text-lg md:text-xl font-mono animate-float">
         &lt;div className="code"&gt;
       </div>
