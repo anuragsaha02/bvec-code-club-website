@@ -1,101 +1,211 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Adapting BVEC CODE CLUB colors to the theme system */
+    --background: 0 0% 5%; /* #0D0D0D Dark Background */
+    --foreground: 0 0% 98%; /* Light text for dark background */
+
+    --card: 0 0% 7%; /* Slightly lighter than background for cards */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 192 100% 80%; /* Soft Blue #A0E6FF */
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 43 89% 63%; /* Yellow #F4D35E */
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 220 7% 56%; /* Neutral Gray */
+    --muted-foreground: 0 0% 90%;
+
+    --accent: 43 89% 63%; /* Yellow #F4D35E */
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 192 100% 80%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 192 100% 80%;
+    --sidebar-primary: 192 100% 80%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 43 89% 63%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 192 100% 80%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 192 100% 80%; /* Soft Blue #A0E6FF */
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 43 89% 63%; /* Yellow #F4D35E */
+    --secondary-foreground: 0 0% 5%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 89% 63%; /* Yellow #F4D35E */
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 192 100% 60%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 5%;
+    --sidebar-primary: 192 100% 80%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 43 89% 63%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 192 100% 60%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+
+  .typing-container {
+    @apply overflow-hidden whitespace-nowrap;
+  }
+  
+  .typing-text {
+    @apply inline-block overflow-hidden whitespace-nowrap border-r-4 pr-1;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-secondary rounded-full;
+  }
+
+  .code-card {
+    @apply bg-card border border-primary/20 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold transition-all hover:bg-primary/80 focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-md font-semibold transition-all hover:bg-secondary/80 focus:ring-2 focus:ring-secondary/50 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-md font-semibold transition-all hover:bg-primary/10 focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  /* Animate on scroll utility classes */
+  .animate-on-scroll {
+    @apply opacity-0;
+  }
+  
+  .animate-fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .animate-slide-in {
+    @apply animate-slide-in;
+  }
+  
+  .animate-slide-in-right {
+    @apply animate-slide-in-right;
+  }
+
+  /* Code blocks with transparent background and colored border */
+  .code-block {
+    @apply bg-codedark/50 border-l-4 border-codeblue p-4 rounded-r-md font-mono text-sm overflow-x-auto;
+  }
+
+  /* Timeline for history section */
+  .timeline-container {
+    @apply relative border-l-2 border-primary py-6 pl-6 ml-6;
+  }
+
+  .timeline-dot {
+    @apply absolute w-4 h-4 bg-secondary rounded-full -left-[9px] border-4 border-background;
+  }
+
+  .timeline-card {
+    @apply code-card p-4 mb-6;
+  }
+
+  /* Gallery masonry */
+  .masonry-grid {
+    @apply columns-1 sm:columns-2 lg:columns-3 gap-4;
+  }
+
+  .masonry-item {
+    @apply mb-4 break-inside-avoid;
+  }
+
+  /* Navigation styles */
+  .navbar {
+    @apply fixed top-0 left-0 w-full z-50 transition-all duration-300;
+  }
+
+  .navbar-scrolled {
+    @apply bg-background/80 backdrop-blur-md border-b border-border/50 shadow-md;
+  }
+
+  /* Form elements */
+  .form-input {
+    @apply w-full bg-card border border-border rounded-md px-4 py-2 focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  /* 3D card flip effect for team members */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
   }
 }
