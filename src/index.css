@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,9 +83,16 @@
     --sidebar-border: 214.3 31.8% 91.4%;
     --sidebar-ring: 192 100% 60%;
   }
-}
 
-@layer base {
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
   * {
     @apply border-border;
     scroll-behavior: smooth;
@@ -214,5 +220,10 @@
 
   .rotate-y-180 {
     transform: rotateY(180deg);
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 15s linear infinite;
+    background-size: 400% 400%;
   }
 }

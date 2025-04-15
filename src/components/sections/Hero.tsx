@@ -1,11 +1,11 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const [showArrow, setShowArrow] = useState(false);
   
   useEffect(() => {
-    // Show arrow after the typing animation completes
     const timer = setTimeout(() => {
       setShowArrow(true);
     }, 3500);
@@ -13,11 +13,8 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
   
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
   
   return (
@@ -35,26 +32,28 @@ const Hero = () => {
           </h2>
         </div>
         
-        <div>
-          <button 
-            className="btn-outline"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        <div className="relative group">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
+          <Button 
+            onClick={scrollToContact}
+            className="relative flex items-center gap-2 px-8 py-6 text-lg bg-background hover:bg-background/90 text-primary border border-primary/20 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_var(--primary)] group-hover:border-primary/50"
           >
-            Join the Club
-          </button>
+            <span className="relative inline-block">Join the Club</span>
+            <Sparkles className="w-5 h-5 animate-pulse" />
+            <div className="absolute inset-0 rounded-lg bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </Button>
         </div>
         
         {showArrow && (
           <div 
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer mt-16"
-            onClick={scrollToAbout}
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <ChevronDown size={32} className="text-primary" />
           </div>
         )}
       </div>
       
-      {/* Code floating elements */}
       <div className="absolute top-1/4 left-10 md:left-20 text-primary/20 text-lg md:text-xl font-mono animate-float">
         &lt;div className="code"&gt;
       </div>
