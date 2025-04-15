@@ -23,25 +23,25 @@ const HISTORY_DATA: HistoryEntry[] = [
     ]
   },
   {
-    year: "2024",
-    title: "Building Momentum",
-    description: "CODE CLUB gained significant recognition within the college and began collaborating with other technical clubs.",
+    year: "2020",
+    title: "Digital Transformation",
+    description: "Adapted to virtual learning environment and expanded online presence.",
     achievements: [
-      "Conducted 20+ workshops covering web development, data science, and mobile app development",
-      "Published our first technical journal with student research papers",
-      "Organized coding competitions with over 150 participants",
-      "Established a dedicated lab space for club activities"
+      "Conducted 20+ virtual workshops",
+      "Launched online mentorship platform",
+      "Organized virtual hackathons",
+      "Created digital resource library"
     ]
   },
   {
-    year: "2023",
+    year: "2017",
     title: "The Beginning",
-    description: "A small group of passionate students founded the BVEC CODE CLUB with a mission to foster coding skills and innovation on campus.",
+    description: "A group of passionate students laid the foundation of BVEC CODE CLUB with a vision to transform the coding culture.",
     achievements: [
-      "Officially recognized as a college club with 25 founding members",
-      "Conducted 5 introductory programming workshops",
-      "Created the club website and social media presence",
-      "Held the first annual coding competition"
+      "Established the club with 15 founding members",
+      "Conducted first coding workshop",
+      "Created the club's constitution",
+      "Organized debut tech talk series"
     ]
   }
 ];

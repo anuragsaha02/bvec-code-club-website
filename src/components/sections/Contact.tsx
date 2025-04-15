@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Github, Instagram, Linkedin, Send, MapPin, Phone } from 'lucide-react';
 import AnimateOnScroll from '../AnimateOnScroll';
@@ -33,7 +32,6 @@ const Contact = () => {
       [name]: value
     }));
     
-    // Clear error for this field when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({
         ...prev,
@@ -71,7 +69,6 @@ const Contact = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Simulate form submission
       setTimeout(() => {
         setIsSubmitting(false);
         setSubmitSuccess(true);
@@ -81,7 +78,6 @@ const Contact = () => {
           message: ''
         });
         
-        // Reset success message after 5 seconds
         setTimeout(() => {
           setSubmitSuccess(false);
         }, 5000);
@@ -110,7 +106,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-muted-foreground">BVEC Campus, Room 203, Tech Building</p>
+                    <p className="text-muted-foreground">BVEC Code Club Office: CSE Academic Building 1st Floor, 1st Room</p>
                   </div>
                 </div>
                 
@@ -120,7 +116,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-muted-foreground">codeclub@bvec.edu</p>
+                    <p className="text-muted-foreground">bveccodeclubofficial@gmail.com</p>
                   </div>
                 </div>
                 

@@ -1,4 +1,3 @@
-
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -36,13 +35,7 @@ const Hero = () => {
           </h2>
         </div>
         
-        <div className="space-x-4">
-          <button 
-            className="btn-primary"
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Explore Projects
-          </button>
+        <div>
           <button 
             className="btn-outline"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

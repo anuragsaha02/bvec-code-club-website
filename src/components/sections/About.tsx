@@ -15,16 +15,18 @@ const About = () => {
               <div className="code-card p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">Vision</h3>
                 <p className="text-muted-foreground">
-                  To create a community of passionate coders who push the boundaries of technology
-                  and innovation, while fostering a collaborative learning environment for all.
+                  To build a space where coders, creators, and curious minds collide — not just to write code, 
+                  but to write stories in logic, design dreams in pixels, and solve real problems with bold ideas. 
+                  BVEC CODE CLUB isn't just a club it's a vibe, a movement, a launchpad.
                 </p>
               </div>
               
               <div className="code-card p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">Mission</h3>
                 <p className="text-muted-foreground">
-                  We strive to empower students with coding skills, problem-solving abilities,
-                  and technical knowledge that prepare them for the future of technology.
+                  We're here to break the "just theory" loop. We experiment, we fail, we debug, and we grow together. 
+                  From sleepless hackathons to passion-fueled projects, our mission is simple: create cool things, 
+                  help each other, and make tech feel less scary and more us.
                 </p>
               </div>
               
