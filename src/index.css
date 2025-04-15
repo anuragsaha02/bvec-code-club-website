@@ -139,16 +139,23 @@
     @apply opacity-0;
   }
   
+  /* Fix for circular dependency - directly use the animation properties instead of @apply */
   .animate-fade-in {
-    @apply animate-fade-in;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
   .animate-slide-in {
-    @apply animate-slide-in;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
   .animate-slide-in-right {
-    @apply animate-slide-in-right;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
   /* Code blocks with transparent background and colored border */

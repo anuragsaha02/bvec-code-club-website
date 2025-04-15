@@ -48,8 +48,26 @@ const AnimateOnScroll = ({
     };
   }, [animation, threshold, delay]);
 
+  // Set initial styles to ensure proper animation
+  const getInitialStyles = () => {
+    switch (animation) {
+      case 'fade-in':
+        return { opacity: 0, transform: 'translateY(10px)' };
+      case 'slide-in':
+        return { opacity: 0, transform: 'translateX(-100px)' };
+      case 'slide-in-right':
+        return { opacity: 0, transform: 'translateX(100px)' };
+      default:
+        return { opacity: 0 };
+    }
+  };
+
   return (
-    <div ref={elementRef} className="animate-on-scroll">
+    <div 
+      ref={elementRef} 
+      className="animate-on-scroll"
+      style={getInitialStyles()}
+    >
       {children}
     </div>
   );
