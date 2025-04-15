@@ -36,11 +36,12 @@ const Hero = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
           <Button 
             onClick={scrollToContact}
-            className="relative flex items-center gap-2 px-8 py-6 text-lg bg-background hover:bg-background/90 text-primary border border-primary/20 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_var(--primary)] group-hover:border-primary/50"
+            className="relative px-8 py-6 text-lg bg-background text-primary border border-primary/20 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_2rem_-0.5rem_var(--primary)] hover:border-primary group"
           >
-            <span className="relative inline-block">Join the Club</span>
-            <Sparkles className="w-5 h-5 animate-pulse" />
-            <div className="absolute inset-0 rounded-lg bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative inline-block group-hover:scale-105 transition-transform duration-300">
+              Join the Club
+              <Sparkles className="inline-block ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+            </span>
           </Button>
         </div>
         
